@@ -1,0 +1,29 @@
+<!-- post login tools arsch-->
+{% if not only_static %}
+<li class="dropdown logged-in" id="website-post-login"
+	data-label="website-post-login" style="display: none;">
+	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+		<span class="user-image-wrapper"></span>
+		<span class="full-name" style="color: black;"></span>
+		<b class="caret" style="color: black;"></b>
+	</a>
+    <ul class="dropdown-menu" role="menu">
+		{%- for child in post_login -%}
+		<li {% if child.label %}data-label="{{ child.label }}" {% endif %}
+			{% if child.class %} class="{{ child.class }}" {% endif %}>
+
+			{%- if child.url -%}
+				<a href="{{ child.url | abs_url }}" {{ child.target or '' }}
+					rel="nofollow" style="color: black;">
+					{{ child.label }}
+				</a>
+			{%- endif -%}
+		</li>
+		{%- endfor -%}
+		<li class='switch-to-desk hidden'><a href="/desk" style="color: black;">{{ _('Switch To Desk') }}</a></li>
+	</ul>
+</li>
+{% if not hide_login %}
+<li class="btn-login-area"><a href="/login" style="color: black;">{{ _("Login") }}</a></li>
+{% endif %}
+{% endif %}

@@ -1,0 +1,27 @@
+	<div class="container" style="width: 100%;">
+	<div class="row hidden-xs" style="background-color: grey; padding: 15px;">
+	<div class="col-sm-2"></div>
+	{% include "templates/cobinet/navbar/banner_extension.html" ignore missing %}
+	<div class="col-sm-1"></div>
+	</div>
+	</div>
+	<nav class="navbar navbar-default navbar-main" role="navigation" id="stickyNavbar" style="background-color:grey;">
+		<div class="container" style="padding-bottom: 20px;">
+			<div class="navbar-header">
+				<a class="navbar-brand ellipsis-cobinet"
+					 href="{{ url_prefix }}{{ home_page or "/"}}">
+					<span>{{ brand_html or (frappe.get_hooks("brand_html") or ["Home"])[0] }}</span>
+				</a>
+				<div class="navbar-right" id="dropdownControl" style="display: none;">
+					<button type="button" class="navbar-button navbar-toggle-cobinet" data-toggle="collapse" data-target="#myNavbar" onclick="dropdownToggle(this)" id="dropdownToggleButton">
+						<div class="bar1"></div>
+						<div class="bar2"></div>
+						<div class="bar3"></div>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+		{% include "templates/cobinet/navbar/dropdown_items.html" %}
+		</div>
+	</nav>

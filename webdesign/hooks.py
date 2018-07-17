@@ -19,8 +19,8 @@ app_license = "GPL"
 # app_include_js = "/assets/webdesign/js/webdesign.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/webdesign/css/webdesign.css"
-# web_include_js = "/assets/webdesign/js/webdesign.js"
+web_include_css = "/assets/webdesign/css/cobinet.css"
+web_include_js = "/assets/webdesign/js/cobinet.js"
 
 # include js in page
 # page_js = {"page" : "public/js/file.js"}
@@ -44,6 +44,10 @@ app_license = "GPL"
 
 # Website user home page (by function)
 # get_website_user_home_page = "webdesign.utils.get_home_page"
+
+website_context = {
+	"base_template_path": "templates/cobinet/base.html"
+}
 
 # Generators
 # ----------

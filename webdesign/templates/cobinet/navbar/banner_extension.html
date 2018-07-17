@@ -1,0 +1,11 @@
+{% if top_bar_items -%}
+<div class="col-sm-9">
+	<div class="row">
+	{%- for page in top_bar_items -%}
+		{% if not page.parent_label -%}
+			{% include "templates/cobinet/navbar/banner_link.html" %}
+		{%- endif -%}
+	{%- endfor %}
+	</div>
+</div>
+{%- endif %}
