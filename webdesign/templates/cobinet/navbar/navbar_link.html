@@ -9,7 +9,7 @@
 		<ul class="dropdown-menu" role="menu">
 		{%- for child in page.child_items -%}
 			<li data-label='{{ child.label }}'>
-				<a {% if child.indent %} style="padding-left: {{((child.indent|int)+1)*15 }}px"{% endif %}
+				<a {% if child.indent %} style="padding-left: {{((child.indent|int)+1)*15 }}px; color: black;"{% else %} style="color: black;"{% endif %}
 					href="{{ child.url | abs_url }}" {{ child.target or '' }}>{{ child.label }}</a>
 			</li>
 		{%- endfor -%}

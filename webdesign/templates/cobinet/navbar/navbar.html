@@ -12,7 +12,14 @@
 					 href="{{ url_prefix }}{{ home_page or "/"}}">
 					<span>{{ brand_html or (frappe.get_hooks("brand_html") or ["Home"])[0] }}</span>
 				</a>
-				<div class="navbar-right" id="dropdownControl" style="display: none;">
+				<div class="hidden-xs navbar-right" id="dropdownControl" style="display: none;">
+					<button type="button" class="navbar-button navbar-toggle-cobinet" data-toggle="collapse" data-target="#myNavbar" onclick="dropdownToggle(this)" id="dropdownToggleButton">
+						<div class="bar1"></div>
+						<div class="bar2"></div>
+						<div class="bar3"></div>
+					</button>
+				</div>
+				<div class="hidden-sm hidden-md hidden-lg navbar-right">
 					<button type="button" class="navbar-button navbar-toggle-cobinet" data-toggle="collapse" data-target="#myNavbar" onclick="dropdownToggle(this)" id="dropdownToggleButton">
 						<div class="bar1"></div>
 						<div class="bar2"></div>
